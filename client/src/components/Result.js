@@ -63,7 +63,7 @@ export default class Result extends Component {
     }
 
     retrieveSki = () => {
-        Axios.post('http://localhost:5000/skis/find', this.state.inputValues).then(res => {  
+        Axios.post('https://ski-selector.herokuapp.com/skis/find', this.state.inputValues).then(res => {  
             console.log(res.data)
 
              const removeEmpty = obj =>

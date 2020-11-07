@@ -10,8 +10,8 @@ const port = process.env.PORT || 5000
 app.use(cors())
 app.use(express.json())
 
-const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true},  // helps get rid of deprecation warnings
+// const uri = process.env.ATLAS_URI;
+mongoose.connect("mongodb+srv://dNielsen:MangoKing202X@cluster0-mqukc.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true},  // helps get rid of deprecation warnings
     (err) => {
         if (err) throw err;
         console.log("Connected to the database");
